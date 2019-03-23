@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC -g  -shared -Wl,-soname,libEigenDecomposition.so -o libEigenDecomposition.so CMakeFiles/EigenDecomposition.dir/src/source_code/eigen_decomposition.cpp.o 

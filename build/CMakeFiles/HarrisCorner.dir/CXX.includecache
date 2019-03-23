@@ -9,6 +9,8 @@
 ../include/harris_corner.h
 iostream
 -
+cmath
+-
 opencv2/opencv.hpp
 ../include/opencv2/opencv.hpp
 
