@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_from
 CMAKE_BINARY_DIR = /home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_fromScratch/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/find_corner.dir
+# Target rules for target CMakeFiles/video_corners.dir
 
 # All Build rule for target.
-CMakeFiles/find_corner.dir/all: CMakeFiles/HarrisCorner.dir/all
-	$(MAKE) -f CMakeFiles/find_corner.dir/build.make CMakeFiles/find_corner.dir/depend
-	$(MAKE) -f CMakeFiles/find_corner.dir/build.make CMakeFiles/find_corner.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_fromScratch/build/CMakeFiles --progress-num=3,4 "Built target find_corner"
-.PHONY : CMakeFiles/find_corner.dir/all
+CMakeFiles/video_corners.dir/all: CMakeFiles/HarrisCorner.dir/all
+	$(MAKE) -f CMakeFiles/video_corners.dir/build.make CMakeFiles/video_corners.dir/depend
+	$(MAKE) -f CMakeFiles/video_corners.dir/build.make CMakeFiles/video_corners.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_fromScratch/build/CMakeFiles --progress-num=9,10 "Built target video_corners"
+.PHONY : CMakeFiles/video_corners.dir/all
 
 # Include target in all.
-all: CMakeFiles/find_corner.dir/all
+all: CMakeFiles/video_corners.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/find_corner.dir/rule: cmake_check_build_system
+CMakeFiles/video_corners.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_fromScratch/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/find_corner.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/video_corners.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_fromScratch/build/CMakeFiles 0
-.PHONY : CMakeFiles/find_corner.dir/rule
+.PHONY : CMakeFiles/video_corners.dir/rule
 
 # Convenience name for target.
-find_corner: CMakeFiles/find_corner.dir/rule
+video_corners: CMakeFiles/video_corners.dir/rule
 
-.PHONY : find_corner
-
-# clean rule for target.
-CMakeFiles/find_corner.dir/clean:
-	$(MAKE) -f CMakeFiles/find_corner.dir/build.make CMakeFiles/find_corner.dir/clean
-.PHONY : CMakeFiles/find_corner.dir/clean
+.PHONY : video_corners
 
 # clean rule for target.
-clean: CMakeFiles/find_corner.dir/clean
+CMakeFiles/video_corners.dir/clean:
+	$(MAKE) -f CMakeFiles/video_corners.dir/build.make CMakeFiles/video_corners.dir/clean
+.PHONY : CMakeFiles/video_corners.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/video_corners.dir/clean
 
 .PHONY : clean
 
@@ -130,6 +130,118 @@ CMakeFiles/HarrisCorner.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/HarrisCorner.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/stitch_image.dir
+
+# All Build rule for target.
+CMakeFiles/stitch_image.dir/all: CMakeFiles/HarrisCorner.dir/all
+CMakeFiles/stitch_image.dir/all: CMakeFiles/KeypointDescriptor.dir/all
+	$(MAKE) -f CMakeFiles/stitch_image.dir/build.make CMakeFiles/stitch_image.dir/depend
+	$(MAKE) -f CMakeFiles/stitch_image.dir/build.make CMakeFiles/stitch_image.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_fromScratch/build/CMakeFiles --progress-num=7,8 "Built target stitch_image"
+.PHONY : CMakeFiles/stitch_image.dir/all
+
+# Include target in all.
+all: CMakeFiles/stitch_image.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/stitch_image.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_fromScratch/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/stitch_image.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_fromScratch/build/CMakeFiles 0
+.PHONY : CMakeFiles/stitch_image.dir/rule
+
+# Convenience name for target.
+stitch_image: CMakeFiles/stitch_image.dir/rule
+
+.PHONY : stitch_image
+
+# clean rule for target.
+CMakeFiles/stitch_image.dir/clean:
+	$(MAKE) -f CMakeFiles/stitch_image.dir/build.make CMakeFiles/stitch_image.dir/clean
+.PHONY : CMakeFiles/stitch_image.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/stitch_image.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/KeypointDescriptor.dir
+
+# All Build rule for target.
+CMakeFiles/KeypointDescriptor.dir/all:
+	$(MAKE) -f CMakeFiles/KeypointDescriptor.dir/build.make CMakeFiles/KeypointDescriptor.dir/depend
+	$(MAKE) -f CMakeFiles/KeypointDescriptor.dir/build.make CMakeFiles/KeypointDescriptor.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_fromScratch/build/CMakeFiles --progress-num=3,4 "Built target KeypointDescriptor"
+.PHONY : CMakeFiles/KeypointDescriptor.dir/all
+
+# Include target in all.
+all: CMakeFiles/KeypointDescriptor.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/KeypointDescriptor.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_fromScratch/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/KeypointDescriptor.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_fromScratch/build/CMakeFiles 0
+.PHONY : CMakeFiles/KeypointDescriptor.dir/rule
+
+# Convenience name for target.
+KeypointDescriptor: CMakeFiles/KeypointDescriptor.dir/rule
+
+.PHONY : KeypointDescriptor
+
+# clean rule for target.
+CMakeFiles/KeypointDescriptor.dir/clean:
+	$(MAKE) -f CMakeFiles/KeypointDescriptor.dir/build.make CMakeFiles/KeypointDescriptor.dir/clean
+.PHONY : CMakeFiles/KeypointDescriptor.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/KeypointDescriptor.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/find_corner.dir
+
+# All Build rule for target.
+CMakeFiles/find_corner.dir/all: CMakeFiles/HarrisCorner.dir/all
+	$(MAKE) -f CMakeFiles/find_corner.dir/build.make CMakeFiles/find_corner.dir/depend
+	$(MAKE) -f CMakeFiles/find_corner.dir/build.make CMakeFiles/find_corner.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_fromScratch/build/CMakeFiles --progress-num=5,6 "Built target find_corner"
+.PHONY : CMakeFiles/find_corner.dir/all
+
+# Include target in all.
+all: CMakeFiles/find_corner.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/find_corner.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_fromScratch/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/find_corner.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_fromScratch/build/CMakeFiles 0
+.PHONY : CMakeFiles/find_corner.dir/rule
+
+# Convenience name for target.
+find_corner: CMakeFiles/find_corner.dir/rule
+
+.PHONY : find_corner
+
+# clean rule for target.
+CMakeFiles/find_corner.dir/clean:
+	$(MAKE) -f CMakeFiles/find_corner.dir/build.make CMakeFiles/find_corner.dir/clean
+.PHONY : CMakeFiles/find_corner.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/find_corner.dir/clean
 
 .PHONY : clean
 

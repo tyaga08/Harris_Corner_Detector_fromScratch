@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -g  -shared -Wl,-soname,libDescriptorMatcher.so -o libDescriptorMatcher.so CMakeFiles/DescriptorMatcher.dir/src/source_code/descriptor_matcher.cpp.o 

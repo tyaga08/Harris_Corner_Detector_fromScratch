@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -g  -shared -Wl,-soname,libKeypointDescriptor.so -o libKeypointDescriptor.so CMakeFiles/KeypointDescriptor.dir/src/source_code/keypoint_descriptor.cpp.o 

@@ -4,22 +4,24 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    cv::Mat img1;
+    cv::Mat img, img1;
     try {
-        img1 = cv::imread("../images/door02.jpg");
+        img1 = cv::imread("../images/camera_images/img4.jpg");
         if(!img1.data)
             throw 1;
     }
     
     catch(int err) {
         cerr<<"error "<<err<<": cannot read the image"<<endl;
-        return 1;
+        return -1;
     }
 
-	HarrisCorner *hc_detector = new HarrisCorner;
-	hc_detector->find_harris_corner(img1);
+	cv::resize(img1, img, cv::Size(640,480), 0, 0, cv::INTER_LANCZOS4);
 
-    cv::imshow("actual img", img1);
+	HarrisCorner *hc_detector = new HarrisCorner;
+	hc_detector->find_harris_corner(img);
+
+    cv::imshow("actual img", img);
 	// cv::imshow("grad_x", hc_detector->grad_x);
 	// cv::imshow("grad_y", hc_detector->grad_y);
 	cv::imshow("response matrix", hc_detector->response_matrix);

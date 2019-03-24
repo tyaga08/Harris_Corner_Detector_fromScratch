@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/tyagaraja/WPI/ARN/HW/Week10/Harris_Corner_Detector_from
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named find_corner
+# Target rules for targets named video_corners
 
 # Build rule for target.
-find_corner: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 find_corner
-.PHONY : find_corner
+video_corners: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 video_corners
+.PHONY : video_corners
 
 # fast build rule for target.
-find_corner/fast:
-	$(MAKE) -f CMakeFiles/find_corner.dir/build.make CMakeFiles/find_corner.dir/build
-.PHONY : find_corner/fast
+video_corners/fast:
+	$(MAKE) -f CMakeFiles/video_corners.dir/build.make CMakeFiles/video_corners.dir/build
+.PHONY : video_corners/fast
 
 #=============================================================================
 # Target rules for targets named HarrisCorner
@@ -135,6 +135,45 @@ HarrisCorner: cmake_check_build_system
 HarrisCorner/fast:
 	$(MAKE) -f CMakeFiles/HarrisCorner.dir/build.make CMakeFiles/HarrisCorner.dir/build
 .PHONY : HarrisCorner/fast
+
+#=============================================================================
+# Target rules for targets named stitch_image
+
+# Build rule for target.
+stitch_image: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 stitch_image
+.PHONY : stitch_image
+
+# fast build rule for target.
+stitch_image/fast:
+	$(MAKE) -f CMakeFiles/stitch_image.dir/build.make CMakeFiles/stitch_image.dir/build
+.PHONY : stitch_image/fast
+
+#=============================================================================
+# Target rules for targets named KeypointDescriptor
+
+# Build rule for target.
+KeypointDescriptor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 KeypointDescriptor
+.PHONY : KeypointDescriptor
+
+# fast build rule for target.
+KeypointDescriptor/fast:
+	$(MAKE) -f CMakeFiles/KeypointDescriptor.dir/build.make CMakeFiles/KeypointDescriptor.dir/build
+.PHONY : KeypointDescriptor/fast
+
+#=============================================================================
+# Target rules for targets named find_corner
+
+# Build rule for target.
+find_corner: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 find_corner
+.PHONY : find_corner
+
+# fast build rule for target.
+find_corner/fast:
+	$(MAKE) -f CMakeFiles/find_corner.dir/build.make CMakeFiles/find_corner.dir/build
+.PHONY : find_corner/fast
 
 src/find_corner.o: src/find_corner.cpp.o
 
@@ -190,22 +229,115 @@ src/source_code/harris_corner.cpp.s:
 	$(MAKE) -f CMakeFiles/HarrisCorner.dir/build.make CMakeFiles/HarrisCorner.dir/src/source_code/harris_corner.cpp.s
 .PHONY : src/source_code/harris_corner.cpp.s
 
+src/source_code/keypoint_descriptor.o: src/source_code/keypoint_descriptor.cpp.o
+
+.PHONY : src/source_code/keypoint_descriptor.o
+
+# target to build an object file
+src/source_code/keypoint_descriptor.cpp.o:
+	$(MAKE) -f CMakeFiles/KeypointDescriptor.dir/build.make CMakeFiles/KeypointDescriptor.dir/src/source_code/keypoint_descriptor.cpp.o
+.PHONY : src/source_code/keypoint_descriptor.cpp.o
+
+src/source_code/keypoint_descriptor.i: src/source_code/keypoint_descriptor.cpp.i
+
+.PHONY : src/source_code/keypoint_descriptor.i
+
+# target to preprocess a source file
+src/source_code/keypoint_descriptor.cpp.i:
+	$(MAKE) -f CMakeFiles/KeypointDescriptor.dir/build.make CMakeFiles/KeypointDescriptor.dir/src/source_code/keypoint_descriptor.cpp.i
+.PHONY : src/source_code/keypoint_descriptor.cpp.i
+
+src/source_code/keypoint_descriptor.s: src/source_code/keypoint_descriptor.cpp.s
+
+.PHONY : src/source_code/keypoint_descriptor.s
+
+# target to generate assembly for a file
+src/source_code/keypoint_descriptor.cpp.s:
+	$(MAKE) -f CMakeFiles/KeypointDescriptor.dir/build.make CMakeFiles/KeypointDescriptor.dir/src/source_code/keypoint_descriptor.cpp.s
+.PHONY : src/source_code/keypoint_descriptor.cpp.s
+
+src/stitch_image.o: src/stitch_image.cpp.o
+
+.PHONY : src/stitch_image.o
+
+# target to build an object file
+src/stitch_image.cpp.o:
+	$(MAKE) -f CMakeFiles/stitch_image.dir/build.make CMakeFiles/stitch_image.dir/src/stitch_image.cpp.o
+.PHONY : src/stitch_image.cpp.o
+
+src/stitch_image.i: src/stitch_image.cpp.i
+
+.PHONY : src/stitch_image.i
+
+# target to preprocess a source file
+src/stitch_image.cpp.i:
+	$(MAKE) -f CMakeFiles/stitch_image.dir/build.make CMakeFiles/stitch_image.dir/src/stitch_image.cpp.i
+.PHONY : src/stitch_image.cpp.i
+
+src/stitch_image.s: src/stitch_image.cpp.s
+
+.PHONY : src/stitch_image.s
+
+# target to generate assembly for a file
+src/stitch_image.cpp.s:
+	$(MAKE) -f CMakeFiles/stitch_image.dir/build.make CMakeFiles/stitch_image.dir/src/stitch_image.cpp.s
+.PHONY : src/stitch_image.cpp.s
+
+src/video_corners.o: src/video_corners.cpp.o
+
+.PHONY : src/video_corners.o
+
+# target to build an object file
+src/video_corners.cpp.o:
+	$(MAKE) -f CMakeFiles/video_corners.dir/build.make CMakeFiles/video_corners.dir/src/video_corners.cpp.o
+.PHONY : src/video_corners.cpp.o
+
+src/video_corners.i: src/video_corners.cpp.i
+
+.PHONY : src/video_corners.i
+
+# target to preprocess a source file
+src/video_corners.cpp.i:
+	$(MAKE) -f CMakeFiles/video_corners.dir/build.make CMakeFiles/video_corners.dir/src/video_corners.cpp.i
+.PHONY : src/video_corners.cpp.i
+
+src/video_corners.s: src/video_corners.cpp.s
+
+.PHONY : src/video_corners.s
+
+# target to generate assembly for a file
+src/video_corners.cpp.s:
+	$(MAKE) -f CMakeFiles/video_corners.dir/build.make CMakeFiles/video_corners.dir/src/video_corners.cpp.s
+.PHONY : src/video_corners.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... find_corner"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... video_corners"
 	@echo "... HarrisCorner"
+	@echo "... stitch_image"
+	@echo "... KeypointDescriptor"
+	@echo "... find_corner"
 	@echo "... src/find_corner.o"
 	@echo "... src/find_corner.i"
 	@echo "... src/find_corner.s"
 	@echo "... src/source_code/harris_corner.o"
 	@echo "... src/source_code/harris_corner.i"
 	@echo "... src/source_code/harris_corner.s"
+	@echo "... src/source_code/keypoint_descriptor.o"
+	@echo "... src/source_code/keypoint_descriptor.i"
+	@echo "... src/source_code/keypoint_descriptor.s"
+	@echo "... src/stitch_image.o"
+	@echo "... src/stitch_image.i"
+	@echo "... src/stitch_image.s"
+	@echo "... src/video_corners.o"
+	@echo "... src/video_corners.i"
+	@echo "... src/video_corners.s"
 .PHONY : help
 
 
