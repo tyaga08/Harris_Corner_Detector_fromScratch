@@ -4,7 +4,7 @@
 
 using namespace std;
 
-#define alpha 0.005
+#define alpha 0.05
 
 class HarrisCorner {
 public:
