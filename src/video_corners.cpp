@@ -6,7 +6,7 @@ using namespace std;
 int main(int argc, char** argv) {
 
     cv::Mat img1;
-    cv::VideoCapture *vcap = new cv::VideoCapture("../images/videos/video3.mp4");
+    cv::VideoCapture *vcap = new cv::VideoCapture("../images/videos/video_burgul.mp4");
 
     try {
         if(!vcap->isOpened())
@@ -20,8 +20,8 @@ int main(int argc, char** argv) {
 
 	cv::namedWindow("video_stream_with_corners", 1);
 	HarrisCorner* hc_detector = new HarrisCorner;
-	cv::Mat imagetemp = cv::imread("../images/door02.jpg");
-	cv::resize(imagetemp, imagetemp, cv::Size(640,480), 0, 0, cv::INTER_LANCZOS4);
+	// cv::Mat imagetemp = cv::imread("../images/door02.jpg");
+	// cv::resize(imagetemp, imagetemp, cv::Size(640,480), 0, 0, cv::INTER_LANCZOS4);
 	cv::VideoWriter *vwrite = new cv::VideoWriter("/home/tyagaraja/Downloads/output_video.avi", CV_FOURCC('M','J','P','G'), 10, cv::Size(640, 480));
 	// vwrite->open("/home/tyagaraja/Downloads/output_video.api", CV_FOURCC('M','J','P','G'), 10, cv::Size(640, 480));
 

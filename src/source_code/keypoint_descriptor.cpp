@@ -16,5 +16,6 @@ void KeypointDescriptor::generate_keypoints(HarrisCorner &corners, cv::Mat &img)
 }
 
 void KeypointDescriptor::compute_descriptor(HarrisCorner &corners, cv::Mat &img) {
-    desc_extr.detectAndCompute(img, cv::noArray(), kp, descriptors, true);
+    // desc_extr.detectAndCompute(img, cv::noArray(), kp, descriptors, true);
+    orb->detectAndCompute(img, cv::noArray(), kp, descriptors, true);
 }

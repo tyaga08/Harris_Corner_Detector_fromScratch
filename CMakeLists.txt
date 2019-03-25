@@ -8,7 +8,7 @@
 	set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/build/cmake)
 
 	find_package(OpenCV REQUIRED)
-
+	# message(${OpenCV_LIBS})
 	add_compile_options(-std=c++11)
 
 	include_directories(include

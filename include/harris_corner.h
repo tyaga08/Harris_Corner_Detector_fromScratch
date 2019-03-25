@@ -8,7 +8,7 @@
 using namespace std;
 
 #define alpha 0.04
-#define corner_threshold 200
+#define corner_threshold 180
 
 class HarrisCorner {
 public:
